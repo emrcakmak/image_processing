@@ -1,0 +1,11 @@
+clear all;
+close all;
+clc;
+pkg load image;
+I = imread('lighthouse.png');
+subplot(2,2,1), imshow(I), title('Original Image');
+I1=rgb2gray(I);
+subplot(2,2,2) , imshow(I1), title('Gery Scale Image');
+I2 = imrotate(I, 135);
+subplot(2,2,3), imshow(I2), title('Scale Image');
+subplot(2,2,4), imhist(I1), title('his Image');
